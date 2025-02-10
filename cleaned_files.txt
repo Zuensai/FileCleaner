@@ -5,7 +5,6 @@
 02d930e1-0c06-49d3-b19b-0bc4a9929326.tmp
 0f649afd-7696-44cd-8a5a-7c008818dc7e.tmp
 1afd5bfc-c2e2-42a5-98f2-36c7a0be1fef.tmp
-38ac4719-4aeb-4df6-86cf-cb6818802e95.tmp
 54f00011-121a-4be9-a402-4415bdad57b3.tmp
 6432a4e4-a97b-4221-a217-7ee034ae49be.tmp
 6b26f085-84bd-4c31-88e0-630ada9a6503.tmp
@@ -40,6 +39,7 @@ chrome_url_fetcher_2596_1840941447
 chrome_url_fetcher_664_1563967145
 chrome_url_fetcher_9508_1350558443
 cv_debug.log
+e83df376-7ee0-4119-8049-972e727b6cdd.tmp
 edge_BITS_11336_149823527
 edge_BITS_11336_732612388
 edge_BITS_12048_1144056701
@@ -76,10 +76,11 @@ noConfigDebugAdapterEndpoints-a602bc7db91737209af3
 noConfigDebugAdapterEndpoints-d39d0014c818008363ae
 noConfigDebugAdapterEndpoints-e65b501b864011067b93
 noConfigDebugAdapterEndpoints-e752810fcf42481e4633
+noConfigDebugAdapterEndpoints-f4d6a5a336b792f0f42b
 Notification Cache
 pyright-13148-7n5ksVoZxXLi
+pyright-19500-jcFPKQ0RI7d6
 pyright-3228-z2K4vdARKx2a
-pyright-4876-8BuoKj4pEvIr
 pyright-6968-vyTyK91ODms0
 python-languageserver-cancellation
 scoped_dir13136_1582610473

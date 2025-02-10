@@ -38,9 +38,14 @@ def scan_files():
 def clean_files():
     confirmation = messagebox.askyesno("Confirm Deletion", "Do you want to proceed with deleting these files?")
     if confirmation:
+        # Log the files that are about to be deleted
         with open("cleaned_files.txt", "w") as f:
             for file in all_files:
                 f.write(f"{file}\n")
+        
+        # Clear the listbox after cleaning
+        listbox.delete(0, tk.END)
+        
         messagebox.showinfo("Success", "Files have been logged and deleted.")  # You can add actual deletion code here
     else:
         messagebox.showinfo("Cancelled", "File deletion process has been canceled.")
