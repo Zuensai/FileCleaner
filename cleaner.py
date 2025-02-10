@@ -18,11 +18,21 @@ def list_files_in_directory(directory):
         print(f"Error in {directory}: {e}")
         return []  # Return an empty list if there was an error
 
-# Loop through directories, list files, and store them in 'files'
-all_files = []  # This will store the list of all files from all directories
-for directory in directories:
-    files = list_files_in_directory(directory)  # Get the files from the directory
-    all_files.extend(files)  # Add the files to the overall list
+# Function to scan files
+def scan_files():
+    global all_files
+    all_files = []  # Reset the file list
+    for directory in directories:
+        files = list_files_in_directory(directory)
+        all_files.extend(files)
+
+    # Clear the current listbox and insert the new files
+    listbox.delete(0, tk.END)
+    for file in all_files:
+        listbox.insert(tk.END, file)
+
+    # Enable the "Clean" button after scanning
+    clean_button.config(state=tk.NORMAL)
 
 # Function to handle the "Clean" button click
 def clean_files():
@@ -39,14 +49,16 @@ def clean_files():
 root = tk.Tk()
 root.title("File Cleaner")
 
-# Create and pack the listbox to show files
+# Create and pack the "Scan" button
+scan_button = tk.Button(root, text="Scan", width=20, height=2, command=scan_files)
+scan_button.pack(pady=10)
+
+# Create and pack the listbox to show files (initially empty)
 listbox = tk.Listbox(root, width=80, height=20)
-for file in all_files:
-    listbox.insert(tk.END, file)
 listbox.pack(padx=10, pady=10)
 
 # Create and pack the "Clean" and "Cancel" buttons
-clean_button = tk.Button(root, text="Clean", width=20, command=clean_files)
+clean_button = tk.Button(root, text="Clean", width=20, command=clean_files, state=tk.DISABLED)
 clean_button.pack(side=tk.LEFT, padx=10, pady=10)
 
 cancel_button = tk.Button(root, text="Cancel", width=20, command=root.quit)

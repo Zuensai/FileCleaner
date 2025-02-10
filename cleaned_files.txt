@@ -5,17 +5,16 @@
 02d930e1-0c06-49d3-b19b-0bc4a9929326.tmp
 0f649afd-7696-44cd-8a5a-7c008818dc7e.tmp
 1afd5bfc-c2e2-42a5-98f2-36c7a0be1fef.tmp
-1e3d83e6-378e-4fc4-9db2-608c83d64191.tmp
+38ac4719-4aeb-4df6-86cf-cb6818802e95.tmp
+54f00011-121a-4be9-a402-4415bdad57b3.tmp
 6432a4e4-a97b-4221-a217-7ee034ae49be.tmp
 6b26f085-84bd-4c31-88e0-630ada9a6503.tmp
 72c3ef09-2e8f-4ba8-979f-c1a5ad20f732.tmp
-758fa401-1819-49c6-8b0c-6afa687c44fd.tmp
 86d949ca-74e6-470c-9275-b6a10b5bb608.tmp
 8a5894b2-a704-4329-9998-849099fdf086.tmp
-8aefb81d-bfa2-4763-ab69-a700a7c4aedf.tmp
-92120427-023a-4304-881d-687c9418d67d.tmp
 9752c78d-8d39-4bc4-bdcb-d03350a14a39.tmp
 9f5c5cff-1272-4364-ae88-32cacd4ac525.tmp
+a306ad18-7b29-4722-bbcf-2706891bc880.tmp
 a50d182c-e939-4191-a145-0d1f3d2d016e.tmp
 b265a174-2d57-4e1d-8378-1b95ac7efadd.tmp
 chrome_BITS_10696_1821354048
@@ -75,11 +74,12 @@ noConfigDebugAdapterEndpoints-55b363ed322a678447e6
 noConfigDebugAdapterEndpoints-58763260fd1eeba93614
 noConfigDebugAdapterEndpoints-a602bc7db91737209af3
 noConfigDebugAdapterEndpoints-d39d0014c818008363ae
+noConfigDebugAdapterEndpoints-e65b501b864011067b93
+noConfigDebugAdapterEndpoints-e752810fcf42481e4633
 Notification Cache
 pyright-13148-7n5ksVoZxXLi
-pyright-18960-ry3WYWLIY0ZK
 pyright-3228-z2K4vdARKx2a
-pyright-5212-IWvw35WMFE8e
+pyright-4876-8BuoKj4pEvIr
 pyright-6968-vyTyK91ODms0
 python-languageserver-cancellation
 scoped_dir13136_1582610473
@@ -1056,7 +1056,6 @@ f_00d115
 f_00d116
 f_00d117
 f_00d118
-f_00d119
 f_00d11a
 f_00d11b
 f_00d11c
@@ -1094,4 +1093,13 @@ f_00d13b
 f_00d13c
 f_00d13d
 f_00d13e
+f_00d13f
+f_00d140
+f_00d141
+f_00d142
+f_00d143
+f_00d144
+f_00d145
+f_00d146
+f_00d147
 index
