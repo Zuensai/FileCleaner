@@ -52,10 +52,17 @@ def clean_files():
 
 # Create the main window
 root = tk.Tk()
-root.title("File Cleaner")
+root.title("Svensai Cleaner 1.0")
+
+# Set the background color of the window to MediumPurple3
+root.config(bg="MediumPurple3")
+
+# Create and pack the title label
+title_label = tk.Label(root, text="Svensai Cleaner 1.0", font=("Arial Narrow", 16), bg="MediumPurple3", fg="black")
+title_label.pack(pady=10)
 
 # Create and pack the "Scan" button
-scan_button = tk.Button(root, text="Scan", width=20, height=2, command=scan_files)
+scan_button = tk.Button(root, text="Scan", width=20, height=2, command=scan_files, bg="Mediumpurple2")
 scan_button.pack(pady=10)
 
 # Create and pack the listbox to show files (initially empty)
@@ -63,10 +70,10 @@ listbox = tk.Listbox(root, width=80, height=20)
 listbox.pack(padx=10, pady=10)
 
 # Create and pack the "Clean" and "Cancel" buttons
-clean_button = tk.Button(root, text="Clean", width=20, command=clean_files, state=tk.DISABLED)
+clean_button = tk.Button(root, text="Clean", width=20, command=clean_files, bg="Mediumpurple2", state=tk.DISABLED)
 clean_button.pack(side=tk.LEFT, padx=10, pady=10)
 
-cancel_button = tk.Button(root, text="Cancel", width=20, command=root.quit)
+cancel_button = tk.Button(root, text="Exit", width=20, command=root.quit, bg="Mediumpurple2")
 cancel_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
 # Start the GUI loop
