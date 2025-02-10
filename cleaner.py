@@ -1,15 +1,15 @@
 import os
+import tkinter as tk
+from tkinter import messagebox
 
 # List of directories to check for files to clean
-
 directories = [
     "C:/Users/svenp/AppData/Local/Temp",  # System temp files
     "C:/Windows/Temp",  # System temp files
     "C:/Users/svenp/AppData/Local/Google/Chrome/User Data/Default/Cache/Cache_Data",  # Chrome cache
-
 ]
 
-# list files from directory
+# List files from directory
 def list_files_in_directory(directory):
     try:
         files = os.listdir(directory)
@@ -23,26 +23,34 @@ all_files = []  # This will store the list of all files from all directories
 for directory in directories:
     files = list_files_in_directory(directory)  # Get the files from the directory
     all_files.extend(files)  # Add the files to the overall list
-    
-# showing a preview of files about to be deleted
-print("\nThese files are about to be deleted:")
+
+# Function to handle the "Clean" button click
+def clean_files():
+    confirmation = messagebox.askyesno("Confirm Deletion", "Do you want to proceed with deleting these files?")
+    if confirmation:
+        with open("cleaned_files.txt", "w") as f:
+            for file in all_files:
+                f.write(f"{file}\n")
+        messagebox.showinfo("Success", "Files have been logged and deleted.")  # You can add actual deletion code here
+    else:
+        messagebox.showinfo("Cancelled", "File deletion process has been canceled.")
+
+# Create the main window
+root = tk.Tk()
+root.title("File Cleaner")
+
+# Create and pack the listbox to show files
+listbox = tk.Listbox(root, width=80, height=20)
 for file in all_files:
-    print(file)
+    listbox.insert(tk.END, file)
+listbox.pack(padx=10, pady=10)
 
-# ask the user for confirmation before proceeding
-confirmation = input("\nDo you want to proceed with deleting these files? (yes/no): ").strip().lower()
+# Create and pack the "Clean" and "Cancel" buttons
+clean_button = tk.Button(root, text="Clean", width=20, command=clean_files)
+clean_button.pack(side=tk.LEFT, padx=10, pady=10)
 
-if confirmation == "yes":
-    # Open the output file in write mode to log filed to be deleted
-    with open("cleaned_files.txt", "w") as f:
-        for file in all_files:
-            f.write(f"{file}\n")
-# Here you can add code for actual file deletion, if needed
-# For example:
-# for file in all_files:
-#     os.remove(file)  # Deletes the file
+cancel_button = tk.Button(root, text="Cancel", width=20, command=root.quit)
+cancel_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
-
-    print("\nFiles have been logged and deleted.")  # You can update this to reflect actual deletion if implemented
-else:
-    print("\nFile deletion process has been canceled.")
+# Start the GUI loop
+root.mainloop()
