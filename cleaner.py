@@ -57,6 +57,10 @@ root.title("Svensai Cleaner 1.0")
 # Set the background color of the window to MediumPurple3
 root.config(bg="MediumPurple3")
 
+# Set a custom icon for the window
+icon = tk.PhotoImage(file="C:\GIT\FileCleaner\Icon.png")  # Replace with your custom icon file
+root.iconphoto(True, icon)
+
 # Create and pack the title label
 title_label = tk.Label(root, text="Svensai Cleaner 1.0", font=("Arial Narrow", 16), bg="MediumPurple3", fg="black")
 title_label.pack(pady=10)
