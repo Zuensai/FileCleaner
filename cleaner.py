@@ -4,9 +4,9 @@ from tkinter import messagebox
 
 # List of directories to check for files to clean
 directories = [
-    "C:/Users/svenp/AppData/Local/Temp",  # System temp files
-    "C:/Windows/Temp",  # System temp files
-    "C:/Users/svenp/AppData/Local/Google/Chrome/User Data/Default/Cache/Cache_Data",  # Chrome cache
+    "C:/TEMP",  # General temp files directory
+    "C:/Windows/Temp",  # General system temp files directory
+    "C:/Users/YourUser/AppData/Local/Google/Chrome/User Data/Default/Cache/Cache_Data",  # General Chrome cache path
 ]
 
 # List files from directory
@@ -46,7 +46,7 @@ def clean_files():
         # Clear the listbox after cleaning
         listbox.delete(0, tk.END)
         
-        messagebox.showinfo("Success", "Files have been logged and deleted.")  # You can add actual deletion code here
+        messagebox.showinfo("Success", "Files have been logged.")  # Placeholder for actual deletion
     else:
         messagebox.showinfo("Cancelled", "File deletion process has been canceled.")
 
@@ -58,7 +58,7 @@ root.title("Svensai Cleaner 1.0")
 root.config(bg="MediumPurple3")
 
 # Set a custom icon for the window
-icon = tk.PhotoImage(file="C:\GIT\FileCleaner\Icon.png")  # Replace with your custom icon file
+icon = tk.PhotoImage(file="C:/path/to/your/icon.png")  # Replace with your custom icon file
 root.iconphoto(True, icon)
 
 # Create and pack the title label
@@ -73,7 +73,7 @@ scan_button.pack(pady=10)
 listbox = tk.Listbox(root, width=80, height=20)
 listbox.pack(padx=10, pady=10)
 
-# Create and pack the "Clean" and "Cancel" buttons
+# Create and pack the "Clean" and "Exit" buttons
 clean_button = tk.Button(root, text="Clean", width=20, command=clean_files, bg="Mediumpurple2", state=tk.DISABLED)
 clean_button.pack(side=tk.LEFT, padx=10, pady=10)
 
